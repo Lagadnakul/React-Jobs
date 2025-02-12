@@ -8,7 +8,16 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['react', 'react-dom'],
-    }
+      output: {
+        manualChunks: undefined
+      }
+    },
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    sourcemap: false
+  },
+  server: {
+    port: 3000
   }
 });
