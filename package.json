@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
- "scripts": {
+"scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "server": "json-server --watch src/jobs.json --port 8000",
-    "docker:build": "docker build -t react-jobs .",
-    "docker:run": "docker run -p 3000:3000 react-jobs",
-    "docker:compose": "docker-compose up"
+    "start": "npm run preview",
+    "render-build": "npm install && npm run build && cp src/jobs.json dist/"
+}
   },
   "dependencies": {
     "react": "^18.3.1",

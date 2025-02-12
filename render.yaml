@@ -1,14 +1,13 @@
 services:
   - type: web
     name: react-jobs
-    env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm run preview
-    envVars:
-      - key: NODE_ENV
-        value: production
+    env: static
+    buildCommand: npm run render-build
     staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0
     routes:
       - type: rewrite
-        source: /api/*
-        destination: /jobs.json
+        source: /*
+        destination: /index.html
