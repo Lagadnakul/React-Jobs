@@ -7,9 +7,10 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 18.0.0
-      - key: VITE_API_URL
-        value: "/api"
     routes:
+      - type: rewrite
+        source: /api/jobs
+        destination: /jobs.json
       - type: rewrite
         source: /api/jobs/(.*)
         destination: /jobs.json
