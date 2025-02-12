@@ -1,7 +1,8 @@
-import React from "react";
+
 import JobListing from "./JobListing.jsx";
 import {useState,useEffect} from "react";
 import Spinners from "./Spinners";
+import Proptypes from 'prop-types';
 const JobListings = ({isHome=false}) => {
   const [jobs,setJobs] = useState([]);
   const [loading,setLoading] = useState(true);
@@ -22,7 +23,7 @@ const JobListings = ({isHome=false}) => {
      
     };
     fetchJobs();
-  }, [])
+  }, [isHome]);
   return (
 
       <section className="bg-blue-50 px-4 py-10">
@@ -39,6 +40,8 @@ const JobListings = ({isHome=false}) => {
               ))}
              </div>
             )}
+
+        
          
             
          
@@ -46,5 +49,9 @@ const JobListings = ({isHome=false}) => {
       </section>
   );
 };
+
+JobListings.propTypes = {
+  isHome: Proptypes.bool
+}
 
 export default JobListings;
