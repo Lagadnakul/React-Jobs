@@ -2,10 +2,6 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/jobs.json",
-        "use": "@vercel/static"
-      },
-      {
         "src": "package.json",
         "use": "@vercel/static-build",
         "config": {
@@ -16,11 +12,11 @@
     "routes": [
       {
         "src": "/api/jobs/(.*)",
-        "dest": "src/jobs.json"
+        "dest": "/jobs.json"
       },
       {
         "src": "/(.*)",
         "dest": "/index.html"
       }
     ]
-}
+  }
