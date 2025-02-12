@@ -6,10 +6,11 @@
  "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "vercel-build": "npm install && npm run build && cp src/jobs.json dist/",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "json-server --watch src/jobs.json --port 8000"
+    "server": "json-server --watch src/jobs.json --port 8000",
+    "docker:build": "docker build -t react-jobs .",
+    "docker:run": "docker run -p 3000:3000 react-jobs",
+    "docker:compose": "docker-compose up"
   },
   "dependencies": {
     "react": "^18.3.1",
