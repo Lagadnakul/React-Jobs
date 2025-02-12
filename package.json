@@ -3,11 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
+ "scripts": {
     "dev": "vite",
     "build": "vite build && copy src\\jobs.json dist\\",
-    "preview": "vite preview",
-    "server": "json-server --watch src/jobs.json --port 8000"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
