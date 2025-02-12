@@ -7,10 +7,15 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 18.0.0
+      - key: NPM_CONFIG_LEGACY_PEER_DEPS
+        value: "true"
     routes:
       - type: rewrite
-        source: /jobs.json
+        source: /api/jobs
         destination: /jobs.json
       - type: rewrite
-        source: /*
+        source: /api/jobs/(.*)
+        destination: /jobs.json
+      - type: rewrite
+        source: /(.*)
         destination: /index.html
