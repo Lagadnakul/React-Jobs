@@ -8,10 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "server": "json-server --watch src/jobs.json --port 8000",
-    "start": "npm run preview",
-    "render-build": "npm install && npm run build && cp src/jobs.json dist/"
-}
-  },
+    "start": "node server.js",
+    "render-build": "npm install && npm run build && copy src\\jobs.json dist\\"
+},
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
