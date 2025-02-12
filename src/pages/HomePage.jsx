@@ -1,5 +1,5 @@
 
-import Hero from '../components/Hero'
+import Hero from '../components/hero'
 import HomeCards from '../components/homecards'
 import JobListings from '../components/joblistings'
 import ViewAllJobs from '../components/ViewAllJobs'
