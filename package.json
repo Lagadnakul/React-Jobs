@@ -6,7 +6,8 @@
  "scripts": {
     "dev": "vite",
     "build": "vite build && copy src\\jobs.json dist\\",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-server --watch src/jobs.json --port 8000"
   },
   "dependencies": {
     "react": "^18.3.1",
